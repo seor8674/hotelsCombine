@@ -1,5 +1,6 @@
 package com.example.hotelscombine.web.member.domain;
 
+import com.example.hotelscombine.web.authority.Authority;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,6 +14,7 @@ import java.util.Set;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class Member {
 
     @Id
@@ -27,6 +29,8 @@ public class Member {
     private String password;
 
     private String name;
+
+    private boolean activated;
 
 
     @ManyToMany
